@@ -205,6 +205,17 @@ section{padding:96px 0}
 .hero-photo{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/2;background:var(--alt);box-shadow:0 24px 48px rgba(25,25,25,.14)}
 .hero-photo .badge{position:absolute;left:16px;bottom:16px;background:#fff;border-left:4px solid var(--yellow);padding:10px 14px;border-radius:10px;font-weight:700;font-size:15px;line-height:1.3;box-shadow:0 8px 20px rgba(0,0,0,.15)}
 .hero-photo .badge small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.banner{position:relative;padding:0;min-height:520px;display:flex;align-items:center;overflow:hidden;background:var(--ink);color:#fff}
+.banner>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banner .shade{position:absolute;inset:0;background:rgba(15,15,15,.25)}
+.banner .wrap{position:relative;width:100%;padding-top:88px;padding-bottom:88px}
+.banner .card{max-width:500px;margin-left:auto;background:rgba(25,25,25,.78);border-left:6px solid var(--yellow);border-radius:16px;padding:36px}
+.banner h2{color:#fff}
+.banner p{color:#e6e6e6;font-size:19px}
+.banner .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.banner .btn-ghost{border-color:#fff;color:#fff}
+.banner .btn-ghost:hover{background:#fff;color:var(--ink)}
+@media (max-width:860px){.banner{display:block;min-height:0}.banner>img{position:static;height:auto;aspect-ratio:16/10}.banner .shade{display:none}.banner .wrap{padding-top:0;padding-bottom:0}.banner .card{max-width:none;margin:-36px 0 40px;background:var(--ink);padding:26px}}
 .dark{background:var(--ink);color:#fff}
 .dark .eyebrow{color:#fff}
 .dark .muted{color:#c9c9c9}
@@ -717,6 +728,23 @@ form .btn{justify-self:start}
     <div class="review-links reveal" id="reviewLinks" hidden>
       <a class="btn btn-ghost js-reviews" href="#" target="_blank" rel="noopener">All Wyndham reviews</a>
       <a class="btn btn-ghost js-greviews" href="#" target="_blank" rel="noopener" hidden>Google reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING BANNER ============ -->
+<section class="banner" id="stay" data-crumb="Book your stay" aria-label="Book your stay">
+  <img src="images/exterior-front.jpg" alt="Super 8 by Wyndham Kingsland lobby, Super 8 sign and covered drive-up entrance seen from above" loading="lazy">
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="card reveal">
+      <span class="eyebrow" style="color:#fff">Your stop off I-95 Exit 3</span>
+      <h2>Pull in, check in, rest easy</h2>
+      <p>Covered drive-up check-in, free parking right outside your door, and room for RVs and trailers. Book on the official Wyndham site or call the front desk.</p>
+      <div class="acts">
+        <a class="btn btn-red js-book" data-label="Banner: Book now" href="#" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg>Book now</a>
+        <a class="btn btn-ghost js-call" href="tel:+19125769659"><svg><use href="#i-phone"/></svg>Call now</a>
+      </div>
     </div>
   </div>
 </section>
